@@ -1,5 +1,6 @@
 // src/pages/Mypage.tsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Background from '../components/Background';
 import Footer from '../components/Footer';
@@ -7,6 +8,12 @@ import avatarImg from '../assets/폼폼푸린.png';   // 프로필 이미지
 import '../styles/Mypage.css';
 
 const Mypage: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleReviewClick = () => {
+    navigate('/review');
+  };
+
   return (
     <div className="Mypage">
       <Header />
@@ -80,7 +87,7 @@ const Mypage: React.FC = () => {
               <p className="history-date">{item.date}</p>
               <p className="history-members">{item.members}</p>
               <p className="history-location">{item.location}</p>
-              <button className="review-btn">합주 리뷰 작성</button>
+              <button className="review-btn" onClick={handleReviewClick}>합주 리뷰 작성</button>
             </div>
           ))}
         </div>

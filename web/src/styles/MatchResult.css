@@ -6,6 +6,7 @@
 .MatchResult-container {
     position: relative;
     width: 430px;
+    z-index: 10;
 }
 
 .match_result_header {
@@ -44,7 +45,7 @@
     color: white;
 }
 
-.player_card {
+.match_result_player_card {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -56,7 +57,7 @@
     height: 78px;
 }
 
-.avatar_container {
+.match_result_avatar_container {
     width: 50px;
     height: 52px;
     border: 1px solid #707070;
@@ -65,7 +66,7 @@
     margin-right: 14px;
 }
 
-.player_name_container {
+.match_result_player_name_container {
     margin-left: 1px;
     margin-right: 1px;
     display: flex;
@@ -73,29 +74,29 @@
     align-items: left;
 }
 
-.player_name {
+.match_result_player_name {
     font: normal normal bold 15px/18px Pretendard;
     color: #000;
     text-align: left;
 }
 
-.area {
+.match_result_area {
     margin-top: 4px;
     font: normal normal bold 15px/18px Pretendard;
     color: #000;
     text-align: left;
 }
 
-.player_info {
+.match_result_player_info {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 10px;
 }
 
-.badge {
-    max-width: 50px;
-    max-height: 20px;
+.match_result_badge {
+    width: 50px;
+    height: 20px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #68B1EC;
     border-radius: 30px;
@@ -109,13 +110,21 @@
     margin-bottom: 20px;
 }
 
-.next_button_container {
+.match_result_badge h3 {
+    text-align: center;
+    font: normal normal medium 12px/14px Pretendard!important;
+    letter-spacing: 0px;
+    color: #68B1EC;
+    opacity: 1;
+}
+
+.match_result_next_button_container {
     margin-top: 20px;
     display: flex;
     justify-content: center;
 }
 
-.next_button {
+.match_result_next_button {
     width: 348px;
     height: 50px;
     background-color: #68B1EC;
@@ -127,6 +136,6 @@
     transition: background-color 0.2s ease;
 }
 
-.next_button:hover {
+.match_result_next_button:hover {
     background-color: #5a9cd9;
 } 

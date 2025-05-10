@@ -29,70 +29,82 @@ const MatchResult: React.FC = () => {
                         <h1>5월 15일 저녁 합주</h1>
                     </div>
                     <div className="match_result_content">
-                        <div className="player_card">
-                            <div className="avatar_container">
+                        <div className="match_result_player_card">
+                            <div className="match_result_avatar_container">
                                 <img src={avatarImg} alt="아바타" className="profile-avatar" />
                             </div>
-                            <div className="player_name_container">
-                                <div className="player_name">폼폼푸린</div>
-                                <div className="area">Area 6</div>
+                            <div className="match_result_player_name_container">
+                                <div className="match_result_player_name">폼폼푸린</div>
+                                <div className="match_result_area">Area 6</div>
                             </div>
-                            <div className="player_info">
-                                <div className="badge">보컬</div>
-                                <div className="badge">나</div>
+                            <div className="match_result_player_info">
+                                <div className="match_result_badge">
+                                    <h3>보컬</h3>
+                                </div>
+                                <div className="match_result_badge">
+                                    <h3>나</h3>
+                                </div>
                             </div>
                         </div>
-                        <div className="player_card">
-                            <div className="avatar_container">
+                        <div className="match_result_player_card">
+                            <div className="match_result_avatar_container">
                                 <img src={cinnamorollImg} alt="시나모롤" className="profile-avatar" />
                             </div>
-                            <div className="player_name_container">
-                                <div className="player_name">시나모롤</div>
-                                <div className="area">Area 2</div>
+                            <div className="match_result_player_name_container">
+                                <div className="match_result_player_name">시나모롤</div>
+                                <div className="match_result_area">Area 2</div>
                             </div>
-                            <div className="player_info">
-                                <div className="badge">기타</div>
+                            <div className="match_result_player_info">
+                                <div className="match_result_badge">
+                                    <h3>기타</h3>
+                                </div>
                             </div>
                         </div>
-                        <div className="player_card">
-                            <div className="avatar_container">
+                        <div className="match_result_player_card">
+                            <div className="match_result_avatar_container">
                                 <img src={kuromiImg} alt="쿠로미" className="profile-avatar" />
                             </div>
-                            <div className="player_name_container">
-                                <div className="player_name">쿠로미</div>
-                                <div className="area">Area 2</div>
+                            <div className="match_result_player_name_container">
+                                <div className="match_result_player_name">쿠로미</div>
+                                <div className="match_result_area">Area 2</div>
                             </div>
-                            <div className="player_info">
-                                <div className="badge">보컬</div>
+                            <div className="match_result_player_info">
+                                <div className="match_result_badge">
+                                    <h3>보컬</h3>
+                                </div>
                             </div>
                         </div>
-                        <div className="player_card">
-                            <div className="avatar_container">
+                        <div className="match_result_player_card">
+                            <div className="match_result_avatar_container">
                                 <img src={mymelodyImg} alt="마이멜로디" className="profile-avatar" />
                             </div>
-                            <div className="player_name_container">
-                                <div className="player_name">마이멜로디</div>
-                                <div className="area">Area 3</div>
+                            <div className="match_result_player_name_container">
+                                <div className="match_result_player_name">마이멜로디</div>
+                                <div className="match_result_area">Area 3</div>
                             </div>
-                            <div className="player_info">
-                                <div className="badge">베이스</div>
+                            <div className="match_result_player_info">
+                                <div className="match_result_badge">
+                                    <h3>베이스</h3>
+                                </div>
                             </div>
                         </div>
-                        <div className="player_card">
-                            <div className="avatar_container">
+                        <div className="match_result_player_card">
+                            <div className="match_result_avatar_container">
                                 <img src={pochaccoImg} alt="포챠코" className="profile-avatar" />
                             </div>
-                            <div className="player_name_container">
-                                <div className="player_name">포챠코</div>
-                                <div className="area">Area 1</div>
+                            <div className="match_result_player_name_container">
+                                <div className="match_result_player_name">포챠코</div>
+                                <div className="match_result_area">Area 1</div>
                             </div>
-                            <div className="player_info">
-                                <div className="badge">드럼</div>
+                            <div className="match_result_player_info">
+                                <div className="match_result_badge">
+                                    <h3>드럼</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div className="next_button_container">
-                        <button className="next_button" onClick={handleNext}>다음</button>
+                    <div className="match_result_next_button_container">
+                        <button className="match_result_next_button" onClick={handleNext}>다음</button>
                     </div>
                 </div>
             </div>
