@@ -10,7 +10,9 @@ import Footer from '../components/Footer';
 import ShareCard from '../components/ShareCard';
 
 const Share: React.FC = () => {
-
+  const handleShare = () => {
+    alert('공유했습니다');
+  };
 
   return (
     <div className="Share">
@@ -23,11 +25,11 @@ const Share: React.FC = () => {
           date={"2025-05-17"}
           time_slot={'evening'}
           member={["폼폼푸린", "마이멜로디", "시나모롤", "쿠로미", "포차코"]}
-          location_img={''}
+          location_img={location_img}
           location_text={"홍대 그라운드합주실 본점"}
         />
 
-        <button className="blue-round-box">
+        <button className="blue-round-box" onClick={handleShare}>
           <h2>공유하기</h2>
         </button>
       </div>

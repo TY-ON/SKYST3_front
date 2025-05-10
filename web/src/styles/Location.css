@@ -1,0 +1,21 @@
+.next_button_container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.next_button {
+    width: 348px;
+    height: 50px;
+    background-color: #68B1EC;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font: normal normal bold 20px/24px Pretendard;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.next_button:hover {
+    background-color: #5a9cd9;
+} 
