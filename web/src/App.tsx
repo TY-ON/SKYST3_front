@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 import Matching from './pages/Matching';
 import Review from './pages/Review';
+import Location from './pages/Location';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/mypage" element={<Mypage />} />
           <Route path="/matching" element={<Matching />} />
           <Route path="/review" element={<Review />} />
+          <Route path="/location" element={<Location />} />
           {/* 필요시 메인 페이지를 /login 또는 /home 등으로 리다이렉트 */}
           <Route path="*" element={<Home />} />
         </Routes>
