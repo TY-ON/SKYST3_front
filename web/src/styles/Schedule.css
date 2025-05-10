@@ -1,0 +1,18 @@
+.Schedule {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  z-index: 10;
+}
+  
+.Schedule-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  padding-top: 6em;
+  box-sizing: border-box;
+  width: 100%;
+}

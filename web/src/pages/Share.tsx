@@ -23,7 +23,7 @@ const Share: React.FC = () => {
           date={"2025-05-17"}
           time_slot={'evening'}
           member={["폼폼푸린", "마이멜로디", "시나모롤", "쿠로미", "포차코"]}
-          location_img={''}
+          location_img={location_img}
           location_text={"홍대 그라운드합주실 본점"}
         />
 

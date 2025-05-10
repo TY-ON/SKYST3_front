@@ -1,6 +1,5 @@
 // src/pages/Share.tsx
 import React from 'react';
-import location_img from '../assets/그라운드합주실.jpeg';
 import '../styles/Share.css';
 
 interface ShareProps {

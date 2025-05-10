@@ -7,6 +7,7 @@ import Share from './pages/Share';
 import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 import Matching from './pages/Matching';
+import Schedule from './pages/Schedule';
 
 function App() {
   return (
