@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import Share from './pages/Share';
 import Login from './pages/Login';
 import Mypage from './pages/Mypage';
+import Matching from './pages/Matching';
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +17,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/share" element={<Share />} />
           <Route path="/mypage" element={<Mypage />} />
+          <Route path="/matching" element={<Matching />} />
           {/* 필요시 메인 페이지를 /login 또는 /home 등으로 리다이렉트 */}
           <Route path="*" element={<Home />} />
         </Routes>

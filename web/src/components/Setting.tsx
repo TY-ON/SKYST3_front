@@ -8,7 +8,6 @@ import hiphop from '../assets/hiphop.jpg'
 
 import calendar from '../assets/calendar.svg'
 
-import { true_random, part_random } from '../api/queue';
 import { useNavigate } from 'react-router-dom';
 
 export interface ContentProp {
