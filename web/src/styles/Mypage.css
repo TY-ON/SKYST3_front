@@ -57,69 +57,144 @@ html, body, #root {
   box-sizing: border-box;
   margin-bottom: 32px;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+}
+
+.profile-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 /* 5.1 Avatar */
-.profile-avatar {
-  width: 72px;
-  height: 72px;
+.avatar-container {
+  width: 80px;
+  height: 80px;
   border-radius: 8px;
+  border: 2px solid #d0e6ff;
   object-fit: cover;
   margin-right: 16px;
 }
 
-/* 5.2 Info section */
-.profile-info {
+.profile-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-name-container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
-
-.profile-info h3 {
-  font: normal normal bold 18px/22px Pretendard;
-  color: #000;
-  margin: 0 0 8px;
-  text-align : left;
+/* 5.2 Info section */
+.profile-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
 }
 
 /* action buttons row */
 .profile-actions {
   display: flex;
+  flex-direction: column;
   gap: 8px;
-  margin-bottom: 12px;
+  margin-top: 6px;
+  text-align: center;
 }
 
-.btn-outline {
-  flex: 1;
-  font: normal normal medium 15px/18px Pretendard;
-  color: #E95353; /* or #8FBCE6 for second */
-  background: transparent;
-  border: 1px solid currentColor;
-  border-radius: 20px;
-  padding: 4px 8px;
+.btn-action {
+  width: 235px;
+  height: 10px;
+  padding: 10px;
+  border-radius: 50px;
+  border: 2px solid #d0e6ff;
+  background-color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
 }
 
-/* inline badges for position and genre */
-.profile-field {
-  display: inline-flex;
-  align-items: center;
-  margin-right: 8px;
-  margin-bottom: 0;
-  font: normal normal medium 15px/18px Pretendard;
-  color: #000;
-  background: #F0F4FF;
-  border-radius: 12px;
-  padding: 2px 8px;
+.heart-icon {
+  margin-right: 6px;
 }
 
-/* address */
-.profile-address {
-  font: normal normal medium 12px/14px Pretendard;
-  color: #555;
-  margin: 8px 0 0;
+.block-icon {
+  margin-right: 6px;
+}
+
+.like-btn {
+  color: #ff6b6b;
+}
+
+.block-btn {
+  color: #666;
+}
+
+.profile-category-label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+/* 배지 영역 */
+.profile-badges {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  width: 150px;
+  background: white;
+  border: 2px solid #d0e6ff;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* 주소 영역 */
+.profile-location {
+  margin-top: 8px;
+}
+
+.location-label {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.location-value {
+  font-size: 14px;
+  color: #666;
   line-height: 1.4;
-  text-align : left;
+  text-align: left;
+}
+
+/* 매칭 히스토리 헤더 */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.history-header h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.more-btn {
+  font-size: 15px;
+  color: #1F6AA7;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* 6. History header */
