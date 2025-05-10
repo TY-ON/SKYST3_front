@@ -10,7 +10,9 @@ import Footer from '../components/Footer';
 import ShareCard from '../components/ShareCard';
 
 const Share: React.FC = () => {
-
+  const handleShare = () => {
+    alert('공유했습니다');
+  };
 
   return (
     <div className="Share">
@@ -27,7 +29,7 @@ const Share: React.FC = () => {
           location_text={"홍대 그라운드합주실 본점"}
         />
 
-        <button className="blue-round-box">
+        <button className="blue-round-box" onClick={handleShare}>
           <h2>공유하기</h2>
         </button>
       </div>

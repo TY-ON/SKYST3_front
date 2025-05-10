@@ -14,11 +14,47 @@
   padding-top: 6em;
   box-sizing: border-box;
   width: 100%;
-  z-index: 10;
+  height: 1000px
 }
 
-.Share-content > .blue-round-box {
-  margin-top: 2em;
+.share-card {
+    margin-top: 1em;
+    width: 80%;
+    height: auto;
+    background: #fff;
+    
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    
+    padding: 1em;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.member {
+  text-align: left;
+}
+
+.place {
+  text-align: left;
+}
+
+.share-location-img {
+  width: 100%;
+  height: 6em;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 0 8px;
+}
+
+
+
+.blue-round-box {
+  margin-top: 1em;
 
   padding: 1em 0;
   
@@ -30,4 +66,13 @@
 
   font-weight: bold;
   color: white;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px; /* ✅ 두 버튼 사이 여백 명시 */
+}
+.share-buttons button {
+  width: 45%; /* 필요 시 100px, 40px로 지정해도 OK */
 }
