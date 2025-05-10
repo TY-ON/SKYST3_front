@@ -9,6 +9,7 @@ import Mypage from './pages/Mypage';
 import Matching from './pages/Matching';
 import Review from './pages/Review';
 import Location from './pages/Location';
+import MatchResult from './pages/MatchResult';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/matching" element={<Matching />} />
           <Route path="/review" element={<Review />} />
           <Route path="/location" element={<Location />} />
+          <Route path="/matchresult" element={<MatchResult />} />
           {/* 필요시 메인 페이지를 /login 또는 /home 등으로 리다이렉트 */}
           <Route path="*" element={<Home />} />
         </Routes>
