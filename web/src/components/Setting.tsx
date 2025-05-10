@@ -95,7 +95,7 @@ const SettingRandom:React.FC<SettingProp> = ({random}) => {
         <div className='tooltip'>
           <h3>유저 설정을 바탕으로 <br/>[포지션 완전 랜덤] 매칭을 진행합니다</h3>
         </div>
-        <div className='blue-round-box'>
+        <div className='blue-round-box3'>
           매칭 시작하기
         </div>
       </div>
@@ -123,16 +123,16 @@ const SettingRandom:React.FC<SettingProp> = ({random}) => {
         <div className='time_container'>
           <h3>시간 선택</h3>
           <div className='time_selector'>
-            <div className={`${time==="morning"?"blue-round-box ":""}time`} id='morning' onClick={onClickHandler_time}><h3>오전</h3></div>
-            <div className={`${time==="afternoon"?"blue-round-box ":""}time`} id='afternoon' onClick={onClickHandler_time}><h3>오후</h3></div>
-            <div className={`${time==="evening"?"blue-round-box ":""}time`} id='evening' onClick={onClickHandler_time}><h3>저녁</h3></div>
+            <div className={`${time==="morning"?"blue-round-box2 ":""}time`} id='morning' onClick={onClickHandler_time}><h3>오전</h3></div>
+            <div className={`${time==="afternoon"?"blue-round-box2 ":""}time`} id='afternoon' onClick={onClickHandler_time}><h3>오후</h3></div>
+            <div className={`${time==="evening"?"blue-round-box2 ":""}time`} id='evening' onClick={onClickHandler_time}><h3>저녁</h3></div>
           </div>
         </div>
 
         <div className='tooltip'>
           <h3>유저 설정을 바탕으로 <br/>[{tooltip}] 매칭을 진행합니다</h3>
         </div>
-        <div className='blue-round-box' onClick={onClickHandler_match}>
+        <div className='blue-round-box3' onClick={onClickHandler_match}>
           매칭 시작하기
         </div>
       </div>
