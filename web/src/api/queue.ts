@@ -16,7 +16,7 @@ const part_random = async (
     method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": jwt
+            "Authorization": `Bearer ${jwt}`
         },
         body: JSON.stringify({
             "start_date": start_date,
