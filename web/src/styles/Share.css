@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Push down so card starts ~184px from top */
+    /* Push down so card starts ~200px from top */
     padding-top: 184px;
     box-sizing: border-box;
     width: 100%;

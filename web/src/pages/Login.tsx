@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../api/accounts/login';
+import '../styles/Login.css';
+import Background from '../components/Background';
+import Footer from '../components/Footer';
+// import Header from '../components/Header';
 
-import '../css/LoginPage.css';
-
-const LoginPage: React.FC = () => {
+const Login: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -12,22 +14,26 @@ const LoginPage: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (username === '' || password === '') {
-        setError('사용자 이름과 비밀번호를 입력하세요.');
-        return;
+      setError('사용자 이름과 비밀번호를 입력하세요.');
+      return;
     }
-
     if (await login(username, password)) {
-        navigate(`/dashboard/${username}`);
+      navigate(`/dashboard/${username}`);
     } else {
-        setError('로그인에 실패하였습니다.');
-        return;
+      setError('로그인에 실패하였습니다.');
+      return;
     }
   };
 
   return (
-    <div className="login-container">
+    <div className="Login">
+      <div className="Login-bg">
+        <Background />
+      </div>
+      <div className="login-logo-row">
+        <img src={require('../assets/logo.png')} alt="Bandit Logo" className="bandit-logo-img" />
+      </div>
       <form onSubmit={handleSubmit} className="login-form">
         <div className="form-group">
           <input
@@ -36,7 +42,7 @@ const LoginPage: React.FC = () => {
             className="login_id"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            placeholder="ID를 입력하세요"
+            placeholder="ID"
             required
           />
         </div>
@@ -46,15 +52,16 @@ const LoginPage: React.FC = () => {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="비밀번호를 입력하세요"
+            placeholder="비밀번호"
             required
           />
         </div>
         {error && <p className="error-message">{error}</p>}
-        <button type="submit" className="login-button">로그인</button>
+        <button type="submit" className="login-button">Login</button>
       </form>
+      <Footer />
     </div>
   );
 };
 
-export default LoginPage;
+export default Login;
