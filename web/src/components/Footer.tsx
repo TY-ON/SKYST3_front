@@ -12,13 +12,17 @@ const Footer: React.FC = () => {
         navigate('/home');
     };
 
+    const handleMusicClick = () => {
+        navigate('/schedule');
+    };
+
     const handleMyPageClick = () => {
         navigate('/mypage');
     };
 
     return (
     <div className='Footer'>
-        <div className='img_container'>
+        <div className='img_container' onClick={handleMusicClick} style={{ cursor: 'pointer' }}>
             <img src={music} alt="" className='img_music'/>
             <p>합주</p>
         </div>
