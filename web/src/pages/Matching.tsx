@@ -1,5 +1,5 @@
 import React, { MouseEventHandler, ReactElement, useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import '../styles/Matching.css';
 
@@ -15,7 +15,8 @@ import duplicate from '../assets/copy.svg'
 import { true_random, part_random } from '../api/queue';
 
 const Matching: React.FC = () => {
-  const location = useLocation(); 
+  const location = useLocation();
+  const navigate = useNavigate();
   const { random, start_date, end_date, 
     time_slot, genre, instrument} = location.state;
 
@@ -26,6 +27,10 @@ const Matching: React.FC = () => {
             part_random(start_date, end_date, time_slot, genre, instrument);
         }
     });
+
+    const handleCancel = () => {
+        navigate('/home');
+    };
 
   return (
     <div className="Home">
@@ -58,7 +63,7 @@ const Matching: React.FC = () => {
             <div className='matched_num_text'>
                 <h3>매칭 진행중... (3 / 5)</h3>
             </div>
-            <div className='cancel'>
+            <div className='cancel' onClick={handleCancel}>
                 <h3>매칭 중단하기</h3>
             </div>
           </div>

@@ -82,7 +82,7 @@ const Location: React.FC = () => {
 
         {/* 다음 버튼 */}
         <div className="next_button_container">
-          <button className="next_button" onClick={handleNext}>다음</button>
+          <button className="blue-round-box" onClick={handleNext}>다음</button>
         </div>
       </div>
 
