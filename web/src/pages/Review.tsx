@@ -4,6 +4,10 @@ import Header from '../components/Header';
 import Background from '../components/Background';
 import Footer from '../components/Footer';
 import avatarImg from '../assets/폼폼푸린.png';
+import cinnamorollImg from '../assets/시나모롤.png';
+import kuromiImg from '../assets/쿠로미.png';
+import mymelodyImg from '../assets/마이멜로디.png';
+import pochaccoImg from '../assets/포챠코.png';
 import '../styles/Review.css';
 
 
@@ -51,14 +55,14 @@ const Review: React.FC = () => {
                         </div>
                         <div className="player_card">
                             <div className="avatar_container">
-                                <img src={avatarImg} alt="아바타" className="profile-avatar" />
+                                <img src={cinnamorollImg} alt="시나모롤" className="profile-avatar" />
                             </div>
                             <div className="player_name_container">
-                                <div className="player_name">폼폼푸린</div>
-                                <div className="area">Area 6</div>
+                                <div className="player_name">시나모롤</div>
+                                <div className="area">Area 2</div>
                             </div>
                             <div className="player_info">
-                                <div className="badge">보컬</div>
+                                <div className="badge">기타</div>
                             </div>
                             <div className="button_container">
                                 <button 
@@ -77,11 +81,11 @@ const Review: React.FC = () => {
                         </div>
                         <div className="player_card">
                             <div className="avatar_container">
-                                <img src={avatarImg} alt="아바타" className="profile-avatar" />
+                                <img src={kuromiImg} alt="쿠로미" className="profile-avatar" />
                             </div>
                             <div className="player_name_container">
-                                <div className="player_name">폼폼푸린</div>
-                                <div className="area">Area 6</div>
+                                <div className="player_name">쿠로미</div>
+                                <div className="area">Area 2</div>
                             </div>
                             <div className="player_info">
                                 <div className="badge">보컬</div>
@@ -103,14 +107,14 @@ const Review: React.FC = () => {
                         </div>
                         <div className="player_card">
                             <div className="avatar_container">
-                                <img src={avatarImg} alt="아바타" className="profile-avatar" />
+                                <img src={mymelodyImg} alt="마이멜로디" className="profile-avatar" />
                             </div>
                             <div className="player_name_container">
-                                <div className="player_name">폼폼푸린</div>
-                                <div className="area">Area 6</div>
+                                <div className="player_name">마이멜로디</div>
+                                <div className="area">Area 3</div>
                             </div>
                             <div className="player_info">
-                                <div className="badge">보컬</div>
+                                <div className="badge">베이스</div>
                             </div>
                             <div className="button_container">
                                 <button 
@@ -129,14 +133,14 @@ const Review: React.FC = () => {
                         </div>
                         <div className="player_card">
                             <div className="avatar_container">
-                                <img src={avatarImg} alt="아바타" className="profile-avatar" />
+                                <img src={pochaccoImg} alt="포챠코" className="profile-avatar" />
                             </div>
                             <div className="player_name_container">
-                                <div className="player_name">폼폼푸린</div>
-                                <div className="area">Area 6</div>
+                                <div className="player_name">포챠코</div>
+                                <div className="area">Area 1</div>
                             </div>
                             <div className="player_info">
-                                <div className="badge">보컬</div>
+                                <div className="badge">드럼</div>
                             </div>
                             <div className="button_container">
                                 <button 
