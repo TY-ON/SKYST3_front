@@ -8,6 +8,8 @@
     display: flex;
     justify-content: center;
 
+    background-color: #F3FAFF;
+
     z-index: 10;
 }
 

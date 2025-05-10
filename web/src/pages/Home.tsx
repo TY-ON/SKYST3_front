@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from 'react';
+import React, { MouseEventHandler, ReactElement, useEffect, useState } from 'react';
 
 import main_img from '../assets/main.png';
 
@@ -8,38 +8,21 @@ import Header from '../components/Header';
 import Background from '../components/Background';
 import Footer from '../components/Footer';
 
-const setting_true_random = () => {
-
-
-  return (
-    <div className='setting_true_random'>
-      <div className='setting_container'>
-        <div className='title_container'>
-          <h3>장르 선택</h3>
-          <input type="text" placeholder='코드 입력'/>
-        </div>
-        
-        <div className='choose_content'>
-          <p>Jpop</p>
-        </div>
-        <div className='tooltip'>
-          <h3>유저 설정을 바탕으로 <br/>[포지션 완전 랜덤] 매칭을 진행합니다</h3>
-        </div>
-        <div className='blue-round-box'>
-          매칭 시작하기
-        </div>
-      </div>
-    </div>
-  );
-}
+import SettingRandom, { ContentProp } from '../components/Setting';
 
 const Home: React.FC = () => {
   const [popup_true_random, set_popup_true_random] = useState(false);
+  const [popup_part_random, set_popup_part_random] = useState(false);
 
 
-  const onClickHandler = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    set_popup_true_random(true);
-    
+  const onClickHandler_tr = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    set_popup_true_random(!popup_true_random);
+    set_popup_part_random(false);
+  }
+
+  const onClickHandler_pr = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    set_popup_true_random(false);
+    set_popup_part_random(!popup_part_random);
   }
   
   return (
@@ -55,13 +38,14 @@ const Home: React.FC = () => {
             <img src={main_img} id='main_img'/>
         </div>
         <div className='content'>
-          <div className='blue-round-box' onClick={onClickHandler}>
+          <div className='blue-round-box' onClick={onClickHandler_tr}>
               True Random
           </div>
-          { popup_true_random?setting_true_random():""}
-          <div className='blue-round-box'>
+          { popup_true_random?<SettingRandom tooltip="포지션 완전 랜덤"/>:""}
+          <div className='blue-round-box' onClick={onClickHandler_pr}>
               Part Random
           </div>
+          { popup_part_random?<SettingRandom tooltip="포지션 완전 랜덤"/>:""}
           <div className='blue-bottom-line'></div>
           <h1>RBG 이용 방법</h1>
           <div className='blue-round-box'>
