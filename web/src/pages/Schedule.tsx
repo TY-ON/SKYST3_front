@@ -1,7 +1,7 @@
 // src/pages/Share.tsx
 import React from 'react';
 import location1_img from '../assets/그라운드합주실.jpeg';
-import location2_img from '../assets/그라운드합주실.jpeg'
+import location2_img from '../assets/스페이스블루.jpeg'
 import '../styles/Schedule.css';
 
 import Header from '../components/Header';
