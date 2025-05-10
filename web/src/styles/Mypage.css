@@ -1,0 +1,200 @@
+/* src/styles/Mypage.css */
+
+/* 1. Fullscreen reset */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+/* 2. Page container */
+.Mypage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 3. Main content wrapper */
+.Mypage-container {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 360px;
+  margin-top: 120px; /* adjust to align under header */
+  margin-bottom: 60px; /* space above footer */
+}
+
+/* 4. Header row: title + info-change button */
+.mypage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.mypage-header h2 {
+  font: normal normal bold 25px/30px Pretendard;
+  color: #000;
+  margin: 0;
+}
+
+.info-change-btn {
+  font: normal normal medium 15px/18px Pretendard;
+  color: #1F6AA7;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* 5. Profile card */
+.profile-card {
+  background: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* 5.1 Avatar */
+.profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+/* 5.2 Info section */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info h3 {
+  font: normal normal bold 18px/22px Pretendard;
+  color: #000;
+  margin: 0 0 8px;
+  text-align : left;
+}
+
+/* action buttons row */
+.profile-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.btn-outline {
+  flex: 1;
+  font: normal normal medium 15px/18px Pretendard;
+  color: #E95353; /* or #8FBCE6 for second */
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 20px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* inline badges for position and genre */
+.profile-field {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  margin-bottom: 0;
+  font: normal normal medium 15px/18px Pretendard;
+  color: #000;
+  background: #F0F4FF;
+  border-radius: 12px;
+  padding: 2px 8px;
+}
+
+/* address */
+.profile-address {
+  font: normal normal medium 12px/14px Pretendard;
+  color: #555;
+  margin: 8px 0 0;
+  line-height: 1.4;
+  text-align : left;
+}
+
+/* 6. History header */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.history-header h3 {
+  font: normal normal bold 25px/30px Pretendard;
+  color: #000;
+  margin: 0;
+}
+
+.more-btn {
+  font: normal normal medium 15px/18px Pretendard;
+  color: #1F6AA7;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* 7. History list */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 7.1 Each history card */
+.history-card {
+  background: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.history-date {
+  font: normal normal bold 20px/24px Pretendard;
+  color: #000;
+  margin: 0 0 8px;
+  text-align : left;
+}
+
+.history-members {
+  font: normal normal medium 15px/18px Pretendard;
+  color: #333;
+  margin: 0 0 12px;
+  line-height: 1.4;
+  text-align : left;
+}
+
+.history-location {
+  font: normal normal medium 15px/18px Pretendard;
+  color: #333;
+  margin: 0 0 12px;
+  line-height: 1.4;
+  text-align : left;
+}
+
+/* review button */
+.review-btn {
+  font: normal normal medium 15px/18px Pretendard;
+  color: #FFF;
+  background: #68B1EC;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+
