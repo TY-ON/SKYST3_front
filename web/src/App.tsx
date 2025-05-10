@@ -7,6 +7,7 @@ import Share from './pages/Share';
 import Login from './pages/Login';
 import Mypage from './pages/Mypage';
 import Matching from './pages/Matching';
+import Review from './pages/Review';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/share" element={<Share />} />
           <Route path="/mypage" element={<Mypage />} />
           <Route path="/matching" element={<Matching />} />
+          <Route path="/review" element={<Review />} />
           {/* 필요시 메인 페이지를 /login 또는 /home 등으로 리다이렉트 */}
           <Route path="*" element={<Home />} />
         </Routes>
