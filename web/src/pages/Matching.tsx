@@ -20,7 +20,11 @@ const Matching: React.FC = () => {
     time_slot, genre, instrument} = location.state;
 
     useEffect(() => {
-        
+        if (random === "true") {
+            true_random(start_date, end_date, time_slot, genre, instrument);
+        } else if (random === "part") {
+            part_random(start_date, end_date, time_slot, genre, instrument);
+        }
     });
 
   return (

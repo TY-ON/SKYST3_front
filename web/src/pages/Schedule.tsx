@@ -2,7 +2,7 @@
 import React from 'react';
 import location1_img from '../assets/그라운드합주실.jpeg';
 import location2_img from '../assets/그라운드합주실.jpeg'
-import '../styles/Share.css';
+import '../styles/Schedule.css';
 
 import Header from '../components/Header';
 import Background from '../components/Background';
@@ -19,6 +19,7 @@ const Schedule: React.FC = () => {
 
       <div className="Schedule-content">
         <h1>나의 합주 일정</h1>
+
         <ShareCard 
           date={"2025-05-17"}
           time_slot={'evening'}

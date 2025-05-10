@@ -1,13 +1,22 @@
-const part_random = (
+import { Cookies } from "react-cookie";
+
+const part_random = async (
     start_date: string, end_date: string, 
     time_slot: string, 
     genre: string,
     instrument: string
-): Promise<Boolean> => {
-    const result = fetch("http://localhost:5000/api/queue/part_random", {
+): Promise<Boolean | string> => {
+    const jwt = localStorage.getItem("jwt");
+    if (!jwt) {
+        return false;
+    }
+    console.log(jwt);
+
+    const result = fetch("http://155.138.201.89:8000/api/queue/part_random", {
     method: "POST",
         headers: {
             "Content-Type": "application/json",
+            "Authorization": jwt
         },
         body: JSON.stringify({
             "start_date": start_date,
@@ -19,11 +28,11 @@ const part_random = (
     })
     .then((response) => {
         if (response.status === 200) {
-            return true;
+            return response.json();
         }
         return false;
     });
-
+    console.log(result);
     return result;
 }
 
@@ -33,7 +42,7 @@ const true_random = (
     genre: string,
     instrument: string
 ): Promise<Boolean> => {
-    const result = fetch("http://localhost:5000/api/queue/true_random", {
+    const result = fetch("http://155.138.201.89:8000/api/queue/true_random", {
     method: "POST",
         headers: {
             "Content-Type": "application/json",

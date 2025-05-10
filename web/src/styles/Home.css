@@ -2,10 +2,13 @@
     top: 6em;
 
     position: absolute;
+
+    z-index: 7;
 }
 
 .Home-container {
     position: relative;
+    z-index: 7;
 }
 
 .content {
@@ -13,7 +16,7 @@
 
     padding: 0 2em;
     top: 12em;
-    height: max(23em, calc(100vh - 22em));
+    height: max(23em, calc(100vh - 18em));
 
     width: calc(100% - 4em);
 
@@ -26,6 +29,8 @@
 .blue-round-box {
     padding: 0.6em 0;
     
+    margin: 0.5em 0;
+
     background-color: #68B1EC;
     border-radius: 10px;
     border: none;

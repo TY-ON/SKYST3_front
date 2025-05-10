@@ -1,6 +1,6 @@
 // src/pages/Share.tsx
 import React from 'react';
-import '../styles/Share.css';
+import '../styles/ShareCard.css';
 
 interface ShareProps {
     date: string,

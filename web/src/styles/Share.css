@@ -1,5 +1,4 @@
 .Share {
-  position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -15,45 +14,10 @@
   padding-top: 6em;
   box-sizing: border-box;
   width: 100%;
+  z-index: 10;
 }
 
-.share-card {
-    margin-top: 1em;
-    width: 80%;
-    height: 16em;
-    background: #fff;
-    
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-    
-    padding: 1em;
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    z-index: 10;
-}
-
-.member {
-  text-align: left;
-}
-
-.place {
-  text-align: left;
-}
-
-.share-location-img {
-  width: 100%;
-  height: 6em;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 0 0 8px;
-}
-
-
-
-.blue-round-box {
+.Share-content > .blue-round-box {
   margin-top: 2em;
 
   padding: 1em 0;

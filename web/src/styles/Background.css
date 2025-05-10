@@ -8,6 +8,7 @@
     background-color: transparent;
 
     overflow: visible;
+    z-index: 5;
 }
 
 .blue_elipse {

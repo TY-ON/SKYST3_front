@@ -19,6 +19,7 @@ function App() {
           <Route path="/share" element={<Share />} />
           <Route path="/mypage" element={<Mypage />} />
           <Route path="/matching" element={<Matching />} />
+          <Route path="/schedule" element={<Schedule />} />
           {/* 필요시 메인 페이지를 /login 또는 /home 등으로 리다이렉트 */}
           <Route path="*" element={<Home />} />
         </Routes>

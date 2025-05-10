@@ -18,6 +18,7 @@ const Login: React.FC = () => {
       setError('사용자 이름과 비밀번호를 입력하세요.');
       return;
     }
+    console.log(username, password)
     if (await login(username, password)) {
       navigate(`/dashboard/${username}`);
     } else {
