@@ -21,7 +21,7 @@
 .share-card {
     margin-top: 1em;
     width: 80%;
-    height: 16em;
+    height: auto;
     background: #fff;
     
     border-radius: 10px;
@@ -55,7 +55,7 @@
 
 
 .blue-round-box {
-  margin-top: 2em;
+  margin-top: 1em;
 
   padding: 1em 0;
   
@@ -67,4 +67,13 @@
 
   font-weight: bold;
   color: white;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px; /* ✅ 두 버튼 사이 여백 명시 */
+}
+.share-buttons button {
+  width: 45%; /* 필요 시 100px, 40px로 지정해도 OK */
 }
