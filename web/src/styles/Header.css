@@ -1,0 +1,19 @@
+.Header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    padding: 1em 0;
+
+    display: flex;
+    justify-content: center;
+
+    z-index: 10;
+}
+
+.logo {
+    width: 35vw;
+    height: auto;
+}
+
+

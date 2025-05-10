@@ -1,0 +1,44 @@
+.Background {
+    position: fixed;
+    top: 7em;
+
+    width: 100%;
+    height: 100%;
+
+    overflow:visible;
+}
+
+.blue_elipse {
+    position: relative;
+    display: block;
+    left: -2em;
+
+    width: 13em;
+    height: 17em;
+
+    border-radius: 50%;
+
+    background-color: #235DCF;
+    opacity: 0.25;
+    filter: blur(2.5em);
+
+    z-index: 5;
+}
+
+.green_elipse {
+    position: absolute;
+    display: block;
+    right: -2em;
+    bottom: 2em;
+
+    width: 13em;
+    height: 17em;
+
+    border-radius: 50%;
+
+    background-color: #7EB42C;
+    opacity: 0.25;
+    filter: blur(2.5em);
+
+    z-index: 5;
+}
