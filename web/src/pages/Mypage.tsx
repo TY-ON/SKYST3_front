@@ -21,28 +21,39 @@ const Mypage: React.FC = () => {
 
         {/* 프로필 카드 */}
         <div className="profile-card">
-          <img src={avatarImg} alt="아바타" className="profile-avatar" />
-          <div className="profile-info">
-            <h3>폼폼푸린</h3>
-            <div className="profile-actions">
-              <button className="btn-outline">
-                ❤️ 선호 유저 관리
-              </button>
-              <button className="btn-outline">
-                🚫 차단 유저 관리
-              </button>
+          {/* 프로필 정보 영역 */}
+          <div className="profile-top">
+            <div className="avatar-container">
+              <img src={avatarImg} alt="아바타" className="profile-avatar" />
             </div>
-            <div className="profile-field">
-              <span className="label">포지션 :</span>
-              <span className="value badge">보컬</span>
+            <div className="profile-name-container">
+              <div className="profile-name">폼폼푸린</div>
+              <div className="profile-actions">
+                <button className="btn-action like-btn">
+                  <span className="heart-icon">❤️</span> 선호 유저 관리
+                </button>
+                <button className="btn-action block-btn">
+                  <span className="block-icon">🚫</span> 차단 유저 관리
+                </button>
+              </div>
             </div>
-            <div className="profile-field">
-              <span className="label">선호장르 :</span>
-              <span className="value badge">J-POP</span>
-            </div>
-            <p className="profile-address">
-              서울특별시 성북구 안암로 145 뮤직룸랩 1층
-            </p>
+          </div>
+          
+          {/* 포지션/장르 레이블 */}
+          <div className="profile-category-label">
+            포지션 / 장르
+          </div>
+          
+          {/* 배지 영역 */}
+          <div className="profile-badges">
+            <div className="badge">포지션 : 보컬</div>
+            <div className="badge">장르 : J-POP</div>
+          </div>
+          
+          {/* 주소 영역 */}
+          <div className="profile-location">
+            <div className="location-label">내 주소</div>
+            <div className="location-value">서울특별시 성북구 안암로 145 로봇융합관 1층</div>
           </div>
         </div>
 

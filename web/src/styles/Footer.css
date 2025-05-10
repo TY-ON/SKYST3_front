@@ -16,7 +16,8 @@
 
 .img_container {
     height: 2em;
-    width: 3em;
+    width: 4em;
+    align-items: center;
 }
 
 .img_music {
