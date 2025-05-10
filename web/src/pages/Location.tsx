@@ -9,10 +9,10 @@ const Location: React.FC = () => {
   return (
     <div className="Share">
       <Header />
-
+    
       <div className="Share-content">
         <h1 className="share-title">합주 지역 선정 결과</h1>
-
+        <button className="blue-round-box">Area 2</button>
         {/* 카드 1: 그라운드합주실 */}
         <div className="share-card">
           <img src={groundImg} alt="그라운드합주실" className="share-location-img" />
