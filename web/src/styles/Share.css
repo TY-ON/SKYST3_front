@@ -1,110 +1,70 @@
-/* src/styles/Share.css */
-
-/* 1) Full‐screen container */
 .Share {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  z-index: 10;
+}
   
-  /* 2) Background wrapper at z-index 0 */
-  .Share-bg {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
   
-  /* 3) Content sits above background */
-  .Share-content {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Push down so card starts ~200px from top */
-    padding-top: 184px;
-    box-sizing: border-box;
-    width: 100%;
-  }
+.Share-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
-  /* 4) Page title above card */
-  .share-title {
-    font: normal normal bold 25px/30px Pretendard;
-    color: #000;
-    margin: 0 0 12px;
-    text-align: center;
-  }
-  
-  /* 5) White card */
-  .share-card {
-    width: 90%;
-    max-width: 348px;
+  padding-top: 6em;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.share-card {
+    margin-top: 1em;
+    width: 80%;
+    height: 16em;
     background: #fff;
+    
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16);
-    padding: 16px;
+    
+    padding: 1em;
     box-sizing: border-box;
-    margin-bottom: 20px;
-  }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.member {
+  text-align: left;
+}
+
+.place {
+  text-align: left;
+}
+
+.share-location-img {
+  width: 100%;
+  height: 6em;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 0 8px;
+}
+
+
+
+.blue-round-box {
+  margin-top: 2em;
+
+  padding: 1em 0;
   
-  /* 6) Date centered inside card */
-  .share-date {
-    font: normal normal bold 20px/24px Pretendard;
-    color: #000;
-    text-align: center;
-    margin: 0 0 16px;
-  }
-  
-  /* 7) Member label & list, left‐aligned */
-  .share-members-label {
-    font: normal normal bold 20px/24px Pretendard;
-    color: #000;
-    margin: 0 0 4px;
-    text-align: left;
-  }
-  .share-members {
-    font: normal normal medium 15px/18px Pretendard;
-    color: #000;
-    margin: 0 0 16px;
-    line-height: 1.4;
-    text-align: left;
-  }
-  
-  /* 8) Location image & text */
-  .share-location-img {
-    width: 100%;
-    height: 123px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin: 0 0 8px;
-  }
-  .share-location-text {
-    font: normal normal medium 15px/18px Pretendard;
-    color: #000;
-    margin: 0;
-    text-align: left;
-  }
-  
-  /* 9) Share button */
-  .share-button {
-    width: 90%;
-    max-width: 348px;
-    height: 50px;
-    background: #68B1EC;
-    border: none;
-    border-radius: 8px;
-    font: normal normal bold 20px/24px Pretendard;
-    color: #fff;
-    cursor: pointer;
-    margin-bottom: 20px;
-  }
-  
-  /* 10) Footer stays on top of background too */
-  .Share > footer {
-    position: relative;
-    z-index: 1;
-  }
-  
+  background-color: #68B1EC;
+  border-radius: 10px;
+  border: none;
+
+  width: 65%;
+
+  font-weight: bold;
+  color: white;
+}
