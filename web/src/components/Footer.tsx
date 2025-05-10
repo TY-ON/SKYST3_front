@@ -13,11 +13,11 @@ const Footer: React.FC = () => {
         </div>
         <div className='img_container'>
             <img src={home} alt="" className='img_home'/>
-            <p>합주</p>
+            <p>메인</p>
         </div>
         <div className='img_container'>
             <img src={person} alt="" className='img_person'/>
-            <p>합주</p>
+            <p>마이페이지</p>
         </div>
     </div>
     );

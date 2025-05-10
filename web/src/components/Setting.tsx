@@ -8,6 +8,9 @@ import hiphop from '../assets/hiphop.jpg'
 
 import calendar from '../assets/calendar.svg'
 
+import { true_random, part_random } from '../api/queue';
+import { useNavigate } from 'react-router-dom';
+
 export interface ContentProp {
   id: string,
   name: string,
@@ -15,12 +18,22 @@ export interface ContentProp {
 }
 
 export interface SettingProp {
-  tooltip: string;
+  random: string;
 }
 
-const SettingRandom:React.FC<SettingProp> = ({tooltip}) => {
+const SettingRandom:React.FC<SettingProp> = ({random}) => {
   const [janre, setJanre] = useState("");
   const [time, setTime] = useState("evening");
+  
+  let navigate = useNavigate();
+
+  var tooltip = "ERROR";
+
+  if (random === "true") {
+    tooltip = "포지션 완전 랜덤";
+  } else if (random === "part") {
+    tooltip = "포지션 지정";
+  }
 
   const onClickHandler_janre = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
     setJanre(event.currentTarget.id);
@@ -28,6 +41,29 @@ const SettingRandom:React.FC<SettingProp> = ({tooltip}) => {
 
   const onClickHandler_time = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
     setTime(event.currentTarget.id);
+  }
+
+  const onClickHandler_match = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    if (janre === "") {
+      return false;
+    }
+    const start_date = "2025-06-01";
+    const end_date = "2025-06-05";
+    const instrument = "bass";
+
+    if (random !== "true" && random !== "part") {
+      return false;
+    }
+
+    navigate("/matching",  { replace: true, state:{ 
+      random: random,
+      start_date: start_date, end_date: end_date, 
+      time_slot: time,
+      genre: janre,
+      instrument: instrument
+    }});
+
+    return true;
   }
 
   const ChooseContent: React.FC<ContentProp> = ({id, name, img}) => {
@@ -97,7 +133,7 @@ const SettingRandom:React.FC<SettingProp> = ({tooltip}) => {
         <div className='tooltip'>
           <h3>유저 설정을 바탕으로 <br/>[{tooltip}] 매칭을 진행합니다</h3>
         </div>
-        <div className='blue-round-box'>
+        <div className='blue-round-box' onClick={onClickHandler_match}>
           매칭 시작하기
         </div>
       </div>

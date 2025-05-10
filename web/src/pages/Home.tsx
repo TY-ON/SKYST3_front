@@ -1,6 +1,5 @@
-import React, { MouseEventHandler, ReactElement, useEffect, useState } from 'react';
-
-import main_img from '../assets/main.png';
+import React, { MouseEventHandler, ReactElement, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import '../styles/Home.css';
 
@@ -8,7 +7,8 @@ import Header from '../components/Header';
 import Background from '../components/Background';
 import Footer from '../components/Footer';
 
-import SettingRandom, { ContentProp } from '../components/Setting';
+import RBGexplainer from '../components/RBGexplain';
+import SettingRandom from '../components/Setting';
 
 const Home: React.FC = () => {
   const [popup_true_random, set_popup_true_random] = useState(false);
@@ -30,22 +30,17 @@ const Home: React.FC = () => {
       <Header/>
       <Background/>
       <div className='Home-container'>
-        <div className='title'>
-            <h2>내 취향에 맞는 밴드 생성기</h2>
-            <h1>Random Band Generator</h1>
-        </div>
-        <div className='img'>
-            <img src={main_img} id='main_img'/>
-        </div>
+        <RBGexplainer/>
         <div className='content'>
           <div className='blue-round-box' onClick={onClickHandler_tr}>
-              True Random
+            True Random
           </div>
-          { popup_true_random?<SettingRandom tooltip="포지션 완전 랜덤"/>:""}
+          { popup_true_random?<SettingRandom random="true"/>:""}
           <div className='blue-round-box' onClick={onClickHandler_pr}>
-              Part Random
+            Part Random
           </div>
-          { popup_part_random?<SettingRandom tooltip="포지션 완전 랜덤"/>:""}
+          { popup_part_random?<SettingRandom random="part"/>:""}
+          
           <div className='blue-bottom-line'></div>
           <h1>RBG 이용 방법</h1>
           <div className='blue-round-box'>
