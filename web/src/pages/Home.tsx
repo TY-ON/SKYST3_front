@@ -32,28 +32,28 @@ const Home: React.FC = () => {
       <div className='Home-container'>
         <RBGexplainer/>
         <div className='content'>
-          <div className='blue-round-box___' onClick={onClickHandler_tr}>
+          <div className='blue-round-box' onClick={onClickHandler_tr}>
             True Random
           </div>
           { popup_true_random?<SettingRandom random="true"/>:""}
-          <div className='blue-round-box___' onClick={onClickHandler_pr}>
+          <div className='blue-round-box' onClick={onClickHandler_pr}>
             Part Random
           </div>
           { popup_part_random?<SettingRandom random="part"/>:""}
           
           <div className='blue-bottom-line'></div>
           <h1>RBG 이용 방법</h1>
-          <div className='blue-round-box___'>
+          <div className='blue-round-box'>
             장르 선택 후 매칭 시작!
             <p>TRBG : 포지션 완전 랜덤 / RBG : 포지션 지정</p>
           </div>
           <div className='blue-triangle'></div>
-          <div className='blue-round-box___'>
+          <div className='blue-round-box'>
             합주 장소 / 일정 통합 예약
             <p>합주 장소 지정부터 합주 약속, 단체 톡방 생성 까지</p>
           </div>
           <div className='blue-triangle'></div>
-          <div className='blue-round-box___'>
+          <div className='blue-round-box'>
             합주 완료 후 리뷰 작성
             <p>선호 유저 지정 및 유저 차단 가능</p>
           </div>

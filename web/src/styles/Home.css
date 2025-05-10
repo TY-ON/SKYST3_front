@@ -26,7 +26,7 @@
     justify-content: space-between;
 }
 
-.blue-round-box___ {
+.blue-round-box {
     padding: 0.6em 0;
     
     margin: 0.5em 0;
@@ -170,7 +170,7 @@
     justify-content: center;
 }
 
-.blue-round-box___ {
+.blue-round-box {
     background-color: #68B1EC;
     border-radius: 10px;
     border: none;
