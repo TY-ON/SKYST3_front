@@ -84,6 +84,10 @@ const Location: React.FC = () => {
         <div className="next_button_container">
           <button className="blue-round-box" onClick={handleNext}>다음</button>
         </div>
+
+        <div className='something'>
+
+        </div>
       </div>
 
       <Footer />

@@ -75,9 +75,16 @@ const Matching: React.FC = () => {
                     return listItems;
                 })()}
             </div>
+            {num_matched>4?
+            <div className='match_complete' onClick={() => navigate("/matchresult")}>
+                <h3>매칭 완료!</h3>
+            </div>
+            :
             <div className='matched_num_text'>
                 <h3>매칭 진행중... ({num_matched} / 5)</h3>
             </div>
+            }
+            
             <div className='cancel' onClick={handleCancel}>
                 <h3>매칭 중단하기</h3>
             </div>
