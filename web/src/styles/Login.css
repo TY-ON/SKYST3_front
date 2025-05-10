@@ -1,0 +1,122 @@
+.Login {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.login-logo-row {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12em;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.bandit-logo-img {
+  z-index: 1;
+  top: 206px;
+  left: 83px;
+  width: 264px;
+  height: auto;
+}
+
+.login-form {
+  z-index: 1;
+  width: 90%;
+  max-width: 350px;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.form-group {
+  z-index: 1;
+  width: 100%;
+  max-width: 350px;
+  height: 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.login_id {
+  z-index: 1;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 350px;
+  height: 52px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+  opacity: 1;
+  padding: 0.8em;
+  border: none;
+  font-size: 1em;
+}
+
+input[type="password"] {
+  z-index: 1;
+  display: block;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 350px;
+  height: 52px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 8px;
+  opacity: 1;
+  padding: 0.8em;
+  border: none;
+  font-size: 1em;
+}
+
+.login-button {
+  z-index: 1;
+  width: 100%;
+  max-width: 350px;
+  height: 52px;
+  background: #68B1EC;
+  border: none;
+  border-radius: 8px;
+  font: normal normal bold 20px/24px Pretendard;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 0.8em;
+}
+
+.error-message {
+  z-index: 1;
+  color: #e74c3c;
+  font-size: 0.95em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+/* 로고와 네비게이션 영역은 Login.tsx에서 추가 필요 */
+
+.Login > footer {
+  position: relative;
+  z-index: 1;
+}
